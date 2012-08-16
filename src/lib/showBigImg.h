@@ -26,7 +26,7 @@ void show(IplImage* img){
 	for(i=0;i<windows;i++){
 		sprintf(winame[i], "part%d", i+1);
 		CvPoint roi_lt = cvPoint(0, MAXHEIGHT * i);
-		int roi_h      = (i != windows - 1) ? MAXHEIGHT : (MAXHEIGHT * windows - imgh);
+		int roi_h      = (i != windows - 1) ? MAXHEIGHT : (imgh - MAXHEIGHT * (windows-1));
 		int roi_w	   = imgw;
 		CvRect roi     = cvRect(roi_lt.x, roi_lt.y, roi_w, roi_h);
 		cvSetImageROI(img, roi);
