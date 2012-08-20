@@ -4,12 +4,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-<<<<<<< HEAD
 #define MAX_WM_NUMS 4
 #define THRESHOLD 25
 
-=======
->>>>>>> c1eae1c2a134f1674bcbe6742e0a92d926806c8c
 void show_img(IplImage* img);//debug tool
 void init_mask(IplImage* mask);//
 void my_cvAvg(IplImage* src, IplImage* tpl, IplImage* dest, IplImage* mask, double* avg);
@@ -26,10 +23,6 @@ int main(int argc, char** argv){
 		printf("Failed to load image.\n");
 		exit(1);
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> c1eae1c2a134f1674bcbe6742e0a92d926806c8c
 	IplImage* gray_src = cvCreateImage(cvGetSize(src), IPL_DEPTH_8U, 1);
 	IplImage* sub_res  = cvCreateImage(cvGetSize(real_tpl), IPL_DEPTH_8U, 1);
 	cvCvtColor(src, gray_src, CV_BGR2GRAY);
@@ -60,15 +53,12 @@ int main(int argc, char** argv){
 				min=avg;
 				min_pos = cvPoint(w_j,h_i);
 			}
-<<<<<<< HEAD
 			//printf("pos: (%d, %d)\n",h_i,w_j);
 			//printf("avg: %f\n", avg);
 			//printf("===========\n");
-=======
 			printf("pos: (%d, %d)\n",h_i,w_j);
 			printf("avg: %f\n", avg);
 			printf("===========\n");
->>>>>>> c1eae1c2a134f1674bcbe6742e0a92d926806c8c
 		}
 	}
 
